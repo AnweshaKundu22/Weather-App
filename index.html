@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+    <title>Weather App</title>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="sidebar">
+            <div>
+                <form class="search" id="search">
+                    <input type="text" id="query" placeholder="Search...">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <!-- -------suggestions are added using javascript--------- -->
+                </form>
+
+                <div class="weather-icon">
+                    <img id="icon" src="icons/sun/27.png" alt="" id="icon">
+                </div>
+
+                <div class="temperature">
+                    <h1 id="temp">0</h1>
+                    <span class="temp-unit">°C</span>
+                </div>
+                
+                <div class="date-time">
+                    <p id="date-time">Monday, 12:00</p>
+                </div>
+
+                <div class="divider"></div>
+                <div class="condition-rain">
+                    <div class="condition">
+                        <i class="fa-solid fa-cloud"></i>
+                        <p id="condition">Condition</p>
+                    </div>
+
+                    <div class="rain">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p id="rain">perc - 0%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location">
+                <div class="location-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location-text">
+                    <p id="location">Location</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <nav>
+                <ul class="options">
+                    <button class="hourly">today</button>
+                    <button class="week active">week</button>
+                </ul>
+
+                <ul class="options units">
+                    <button class="celcius active">°C</button>
+                    <button class="fahrenheit">°F</button>
+                </ul>
+            </nav>
+
+            <div class="cards" id="weather-cards"></div>
+
+            <div class="highlights">
+                <h2 class="heading">today's highlights</h2>
+                <div class="cards">
+                    <div class="card2">
+                        <h4 class="card-heading">UV Index</h4>
+                        <div class="content">
+                            <p class="uv-index">0</p>
+                            <p class="uv-text">Low</p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <h4 class="card-heading">Wind Status</h4>
+                        <div class="content">
+                            <p class="wind-speed">0</p>
+                            <p class="">Normal</p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <h4 class="card-heading">Sunrise & Sunset</h4>
+                        <div class="content">
+                            <p class="sunrise">0</p>
+                            <p class="sunset">0</p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <h4 class="card-heading">Humidity</h4>
+                        <div class="content">
+                            <p class="humidity">0</p>
+                            <p class="humidity-status">Normal</p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <h4 class="card-heading">Visibility</h4>
+                        <div class="content">
+                            <p class="visibility">0</p>
+                            <p class="visibility-status">Normal</p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <h4 class="card-heading">Air Quality</h4>
+                        <div class="content">
+                            <p class="air-quality">0</p>
+                            <p class="air-quality-status">Normal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="credits">Created with ❤️ by Anwesha Kundu</p>
+        </div>
+    </div>
+
+</body>
+</html>
